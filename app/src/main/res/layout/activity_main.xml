@@ -17,15 +17,15 @@
    <LinearLayout
        android:orientation="horizontal"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="wrap_content"
        android:id="@+id/footer"
        android:layout_alignParentBottom="true">
-
       <EditText
-          android:layout_width="wrap_content"
+          android:layout_width="0dp"
           android:layout_height="wrap_content"
-          android:id="@+id/message_txt"
-          android:layout_gravity="bottom"
+          android:id="@+id/message_text"
+          android:singleLine="true"
+          android:inputType="textShortMessage"
           android:layout_weight="1" />
 
       <Button
@@ -33,6 +33,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Send"
+          android:onClick="onSendButtonClick"
           android:id="@+id/btn_Send"
           android:layout_gravity="bottom" />
    </LinearLayout>
